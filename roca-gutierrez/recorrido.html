@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Metadatos, titulo y enlaces a hojas de estilo de la pagina. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Línea Roca | Recorrido</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <!-- Encabezado con marca y navegacion principal. -->
+    <header class="header-interno">
+        <div class="topbar">
+            <a class="logo ramal-logo" href="index.html" aria-label="Línea Roca, Ramal Bosques Gutiérrez">
+                <span class="ramal-icono" aria-hidden="true"><span>BG</span></span>
+                <span class="logo-texto">
+                    <strong>Línea Roca</strong>
+                    <small>Ramal Bosques - Gutiérrez</small>
+                </span>
+            </a>
+
+            <nav aria-label="Navegación principal">
+                <ul class="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a aria-current="page" href="recorrido.html">Recorrido</a></li>
+                    <li><a href="horarios.html">Horarios</a></li>
+                    <li><a href="accesibilidad.html">Accesibilidad</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="titulo-pagina">
+            <span class="etiqueta">Vía Temperley</span>
+            <h1>Recorrido y estaciones</h1>
+            <p>Conexión entre Plaza Constitución, Bosques y Juan María Gutiérrez.</p>
+        </div>
+    </header>
+    <!-- Contenido principal de la pagina. -->
+    <main class="contenedor">
+        <section class="tarjeta">
+            <h2>Mapa esquemático del recorrido</h2>
+            <p>
+                El servicio parte desde Plaza Constitución, atraviesa estaciones de combinación
+                del corredor sur y continúa desde Bosques hacia Santa Sofía y Gutiérrez.
+            </p>
+
+            <ol class="linea-recorrido" aria-label="Estaciones del recorrido vía Temperley">
+                <li><span>Plaza Constitución</span><small>Terminal y combinación</small></li>
+                <li><span>Hipólito Yrigoyen</span><small>Estación intermedia</small></li>
+                <li><span>Gerli</span><small>Zona residencial</small></li>
+                <li><span>Lanús</span><small>Centro comercial</small></li>
+                <li><span>Remedios de Escalada</span><small>Conexión local</small></li>
+                <li><span>Banfield</span><small>Área urbana</small></li>
+                <li><span>Lomas de Zamora</span><small>Centro regional</small></li>
+                <li><span>Temperley</span><small>Estación de combinación</small></li>
+                <li><span>José Mármol</span><small>Ramal a Bosques</small></li>
+                <li><span>Rafael Calzada</span><small>Acceso barrial</small></li>
+                <li><span>Claypole</span><small>Combinación local</small></li>
+                <li><span>Ardigó</span><small>Estación intermedia</small></li>
+                <li><span>Florencio Varela</span><small>Centro urbano</small></li>
+                <li><span>Zeballos</span><small>Conexión vecinal</small></li>
+                <li><span>Bosques</span><small>Inicio de la extensión a Gutiérrez</small></li>
+                <li><span>Santa Sofía</span><small>Parada indicada en el cuadro horario</small></li>
+                <li><span>Juan María Gutiérrez</span><small>Terminal de la extensión final</small></li>
+            </ol>
+        </section>
+
+        <section class="tarjeta">
+            <h2>Referencia visual del recorrido</h2>
+            <p>
+                La línea muestra el recorrido vía Temperley y marca la extensión final
+                Bosques - Santa Sofía - Gutiérrez.
+            </p>
+            <figure class="captura-pdf">
+                <img src="img/recorrido-linea.png" alt="Línea de estaciones del servicio Plaza Constitución - Bosques - Gutiérrez vía Temperley">
+                <figcaption>Recorte visual del recorrido Plaza Constitución - Bosques - Gutiérrez.</figcaption>
+            </figure>
+
+            <div class="recorrido-movil" aria-label="Vista resumida del recorrido para celular">
+                <h3>Vista rápida para celular</h3>
+                <div class="tramos-recorrido">
+                    <article>
+                        <span>Cabecera</span>
+                        <strong>Plaza Constitución</strong>
+                    </article>
+                    <article>
+                        <span>Combinación principal</span>
+                        <strong>Temperley</strong>
+                    </article>
+                    <article>
+                        <span>Inicio de extensión</span>
+                        <strong>Bosques</strong>
+                    </article>
+                    <article>
+                        <span>Parada intermedia</span>
+                        <strong>Santa Sofía</strong>
+                    </article>
+                    <article>
+                        <span>Destino final</span>
+                        <strong>Juan María Gutiérrez</strong>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="grid-dos-columnas">
+            <article class="tarjeta">
+                <h2>Destinos principales</h2>
+                <ul class="lista-info">
+                    <li><strong>Plaza Constitución:</strong> terminal de cabecera en CABA.</li>
+                    <li><strong>Temperley:</strong> nodo de combinación de la Línea Roca.</li>
+                    <li><strong>Bosques:</strong> estación de trasbordo hacia Gutiérrez.</li>
+                    <li><strong>Juan María Gutiérrez:</strong> destino final del tramo suburbano.</li>
+                </ul>
+            </article>
+
+            <article class="tarjeta">
+                <h2>Ubicación</h2>
+                <p>
+                    El corredor une la zona sur de la Ciudad de Buenos Aires con partidos del
+                    sur del conurbano bonaerense, pasando por Lanús, Lomas de Zamora, Almirante
+                    Brown, Florencio Varela y Berazategui.
+                </p>
+                <a class="boton-secundario" href="https://www.google.com/maps/search/Estaci%C3%B3n+Juan+Mar%C3%ADa+Guti%C3%A9rrez+L%C3%ADnea+Roca" target="_blank" rel="noreferrer">
+                    Ver ubicación en mapa
+                </a>
+            </article>
+        </section>
+
+        <section class="tarjeta media-destacada">
+            <img class="imagen-grande" src="img/tren-roca.jpg" alt="Tren de la Línea Roca detenido en estación">
+            <div>
+                <h2>Tipo de transporte</h2>
+                <p>
+                    Tren regional metropolitano eléctrico. La propuesta está pensada para una
+                    consulta rápida de estaciones, horarios y condiciones de viaje desde un
+                    Centro de Transporte Inteligente.
+                </p>
+            </div>
+        </section>
+    </main>
+    <!-- Pie de pagina con creditos y enlaces secundarios. -->
+    <footer class="footer">
+        <p>Servicio Plaza Constitución - Bosques - Gutiérrez, vía Temperley.</p>
+    </footer>
+</body>
+
+</html>

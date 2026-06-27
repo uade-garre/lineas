@@ -1,0 +1,4 @@
+# Carpetas generadas por herramientas de despliegue o entorno local.
+roca-gutierrez/.netlify/
+roca-gutierrez/.tools/
+roca-gutierrez/__netlify_deploy/
