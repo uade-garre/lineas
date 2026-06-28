@@ -75,9 +75,12 @@
                 Bosques - Santa Sofía - Gutiérrez.
             </p>
             <figure class="captura-pdf">
-                <img src="img/recorrido-linea.png" alt="Línea de estaciones del servicio Plaza Constitución - Bosques - Gutiérrez vía Temperley">
+                <img id="imagen-recorrido" src="img/recorrido-linea.png" alt="Línea de estaciones del servicio Plaza Constitución - Bosques - Gutiérrez vía Temperley">
                 <figcaption>Recorte visual del recorrido Plaza Constitución - Bosques - Gutiérrez.</figcaption>
             </figure>
+            <button class="boton-ampliar-recorrido" type="button" data-open-route-viewer>
+                Ampliar recorrido
+            </button>
 
             <div class="recorrido-movil" aria-label="Vista resumida del recorrido para celular">
                 <h3>Vista rápida para celular</h3>
@@ -142,8 +145,50 @@
             </div>
         </section>
     </main>
+    <div class="visor-recorrido" id="visor-recorrido" aria-hidden="true">
+        <div class="visor-recorrido-fondo" data-close-route-viewer></div>
+        <section class="visor-recorrido-panel" role="dialog" aria-modal="true" aria-label="Recorrido ampliado">
+            <div class="visor-recorrido-header">
+                <div>
+                    <strong>Referencia visual ampliada</strong>
+                    <span>Deslizá hacia los lados para leer todas las estaciones.</span>
+                </div>
+                <button class="visor-recorrido-cerrar" type="button" data-close-route-viewer aria-label="Cerrar recorrido ampliado">Cerrar</button>
+            </div>
+            <div class="visor-recorrido-scroll">
+                <img src="img/recorrido-linea.png" alt="Recorrido ampliado Plaza Constitución - Bosques - Gutiérrez vía Temperley">
+            </div>
+        </section>
+    </div>
     <!-- Pie de pagina con creditos y enlaces secundarios. -->
     <footer class="footer"><p>Desarrollado por <a href="https://uade-garre.github.io/consultora/">Trackline</a> - 2026</p><p><a href="https://uade-garre.github.io/estacion-constitucion/">Volver a Estación Constitución</a></p></footer>
+    <script>
+        (function(){
+            const visor = document.getElementById('visor-recorrido');
+            const abrir = document.querySelector('[data-open-route-viewer]');
+            const cierres = document.querySelectorAll('[data-close-route-viewer]');
+
+            function abrirVisor() {
+                if (!visor) return;
+                visor.classList.add('abierto');
+                visor.setAttribute('aria-hidden', 'false');
+                document.body.classList.add('sin-scroll');
+            }
+
+            function cerrarVisor() {
+                if (!visor) return;
+                visor.classList.remove('abierto');
+                visor.setAttribute('aria-hidden', 'true');
+                document.body.classList.remove('sin-scroll');
+            }
+
+            if (abrir) abrir.addEventListener('click', abrirVisor);
+            cierres.forEach(function(cierre){ cierre.addEventListener('click', cerrarVisor); });
+            document.addEventListener('keydown', function(event){
+                if (event.key === 'Escape') cerrarVisor();
+            });
+        })();
+    </script>
 </body>
 
 </html>
