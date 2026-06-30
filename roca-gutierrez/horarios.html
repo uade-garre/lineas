@@ -201,11 +201,24 @@
             <p>
                 Las tablas anteriores resumen los datos principales. Estos cuadros permiten
                 consultar la grilla completa con estaciones intermedias y horarios por tren.
-                Para lectura en celular, se pueden abrir en tamaño completo en una pestaña nueva.
+                También se incluye el PDF completo para verlo online sin salir de la página.
             </p>
-            <a class="boton-secundario boton-pdf" href="horarios-completos.pdf" target="_blank" rel="noreferrer">
-                Abrir PDF completo
-            </a>
+            <div class="acciones-pdf" aria-label="Acciones sobre el cuadro horario completo">
+                <a class="boton-secundario boton-pdf" href="horarios-completos.pdf" target="_blank" rel="noreferrer">
+                    Abrir PDF completo
+                </a>
+                <a class="boton-secundario boton-pdf boton-descarga" href="horarios-completos.pdf" download>
+                    Descargar PDF
+                </a>
+            </div>
+            <div class="visor-pdf" aria-label="Vista online del PDF de horarios completos">
+                <object data="horarios-completos.pdf" type="application/pdf">
+                    <p>
+                        Si el visor no carga en tu navegador,
+                        <a href="horarios-completos.pdf" target="_blank" rel="noreferrer">abrí el PDF completo</a>.
+                    </p>
+                </object>
+            </div>
             <div class="grid-capturas">
                 <figure class="captura-pdf">
                     <img src="img/cuadro-habiles.png" alt="Cuadro completo de lunes a viernes del servicio Plaza Constitución - Bosques - Gutiérrez vía Temperley">
